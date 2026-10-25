@@ -7,8 +7,12 @@
 > Home `home-assistant/README.md` ("Samsung-tv: extra apps"). **Geen** native Home-knop-aanpassing.
 > **Achtergrond: één eigen foto (Palau, uit Immich)**, niet in git (deze fork is openbaar): `app/assets/wallpapers/palau*.jpg`,
 > `app/assets/materials/palau-*.jpg` en `app/assets/wallpapers/private-catalog.js` staan in `.gitignore`. Opnieuw maken:
-> Immich-asset `e679375c-…` (`thumbnail?size=fullsize`, 1920×1440) midden bijsnijden tot 1920×1080, thumb 512×288,
+> Immich-asset `e679375c-…` (`thumbnail?size=fullsize`, 1920×1440) midden bijsnijden tot 1920×1080 met canvasfilter
+> `saturate(.8) contrast(.92) brightness(.98)` (anders te fel op de tv), thumb 512×288,
 > dan `node scripts/build-materials.mjs palau` met een tijdelijke `palau`-regel in `SOURCES.json` (Playwright-container op de NUC).
+> **Bouwen en installeren** (vanaf de NUC, tv aan, *Host PC IP* = `192.168.178.185`): `app/` naar de NUC, dan in
+> `ghcr.io/georift/install-jellyfin-tizen` `tizen package -t wgt -s dev -- app` en `tizen install -n app/Startscherm.wgt -t <tv>`.
+> **Automatisch openen**: HA-automation `tv_startscherm_bij_aanzetten` (tv off→on, 6 s, `media_player.play_media` type `app`).
 > De browser-tests (`check:browser`) gaan nog uit van de originele apps en Engelse teksten.
 > Openstaand: [backlog#201](https://github.com/Buijsmans/backlog/issues/201).
 
