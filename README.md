@@ -14,7 +14,7 @@
 > `ghcr.io/georift/install-jellyfin-tizen` `tizen package -t wgt -s dev -- app` en `tizen install -n app/Startscherm.wgt -t <tv>`.
 > **Automatisch openen**: HA-automation `tv_startscherm_bij_aanzetten` (tv off→on, 6 s, `media_player.play_media` type `app`).
 > De browser-tests (`check:browser`) gaan nog uit van de originele apps en Engelse teksten.
-> Openstaand: [backlog#201](https://github.com/Buijsmans/backlog/issues/201).
+> **Status (2026-10-25): teruggedraaid**, niet meer in gebruik op de tv; repo blijft als referentie. Zie [backlog#201](https://github.com/Buijsmans/backlog/issues/201).
 
 # CleanFrame
 
