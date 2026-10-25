@@ -2,29 +2,27 @@
 (function () {
   'use strict';
   var IDS = {
-    stremio: 'IkWsFHtOY9.Stremio', netflix: 'org.tizen.netflix-app',
-    disneyplus: 'MCmYXNxgcu.DisneyPlus', youtube: '9Ur5IzDKqV.TizenYouTube',
-    appletv: 'com.samsung.tv.aria-video', primevideo: 'org.tizen.primevideo',
-    abciview: 'mWK87Xghap.ABCiview', sbs: 'OyE7OuxlUi.SBSOnDemand',
-    applemusic: 'org.tizen.apple.apple-music'
+    netflix: 'RN1MCdNq8t.Netflix', videoland: 'WyN2wsAQHK.VideolandV2',
+    youtube: '9Ur5IzDKqV.TizenYouTube', tizentube: 'xvvl3S1bvH.TizenBrewStandalone',
+    disneyplus: 'MCmYXNxgcu.DisneyPlus', npostart: 'iquaePhaki.npostart',
+    jellyfin: 'AprZAARz4r.Jellyfin', odidotv: 'OyP0deWouM.SamsungSmartTV'
   };
-  var STREAMING = ['as6cYRgkPy.Binge', '73iTZRTc34.Stan', '5b8c3eb16b.BeamCTVDev',
-    'KaLitts8bq.tenplaySamsungTizen', 'eYuOiOLYQX.KayoSports', 'Ne2ZsPWdKl.9NOW',
-    '3KA0pm7a7V.TubiTV', 'rJeHak5zRg.Spotify', 'icp4AvUPiA.7plus'];
+  var STREAMING = ['ESMP8SBFDH.videoland', 'iquaePhaki.npostart', 'kOzIRC5Wf7.NLziet', 'azFWqejcXJ.NLZiet', 'dkEzA1pxuO.RTLXL', '8H24TM2DAH.kijk',
+    'evKhCgZelL.AmazonIgnitionLauncher2', 'skysh0WTIM.SkyShowtime', 'xf4VNjoz7A.SmartTVNextGen', 'fjZ4l75rVu.EVA', 'rJeHak5zRg.Spotify', 'com.samsung.tv.aria-video'];
   var CONSUMER_SYSTEM = ['org.tizen.browser', 'com.microsoft.copilot'];
-  var EXTRA_BRANDS = {'rJeHak5zRg.Spotify': 'spotify', '5b8c3eb16b.BeamCTVDev': 'hbomax', '3KA0pm7a7V.TubiTV': 'tubi'};
+  var EXTRA_BRANDS = {'rJeHak5zRg.Spotify': 'spotify'};
   var INTERNAL = ['adplatform.ADPlayer', 'WykOS4t4F0.cmsWebApp', '25emanual3.emanual',
     'ZODRT12q2l.WebAccountExtension', 'ByJlgt0XeD.CastSettingsApp', 'tv6pbVMQFF.PrivacyChoices'];
-  var SELF = 'nClrkHome1.FrameHome';
+  var SELF = 'BuijsHome1.TvStart';
   function api() { return window.tizen && window.tizen.application; }
   function unavailable(done) {
-    done({ message: 'Open CleanFrame on the TV to use this control.', detail: 'The web preview cannot control the TV.' });
+    done({ message: 'Open het startscherm op de tv om dit te gebruiken.', detail: 'De preview in de browser kan de tv niet bedienen.' });
   }
   function failure(err) {
-    return { message: 'The TV could not open this screen.', detail: err && (err.message || err.name) || 'Try again, or press the remote’s Home button to return to CleanFrame.' };
+    return { message: 'De tv kon dit scherm niet openen.', detail: err && (err.message || err.name) || 'Probeer het opnieuw, of druk op de Home-knop van de afstandsbediening.' };
   }
   function bounded(done) {
-    var finished = false, timer = setTimeout(function () { finish({ message: 'The TV did not respond. Please try again.' }); }, 8000);
+    var finished = false, timer = setTimeout(function () { finish({ message: 'De tv reageerde niet. Probeer het opnieuw.' }); }, 8000);
     function finish(err, value) { if (finished) return; finished = true; clearTimeout(timer); done(err, value); }
     return finish;
   }
@@ -35,7 +33,7 @@
     catch (err) { finish(failure(err)); }
   }
   function launch(brand, done) {
-    if (!IDS[brand]) { done({message: 'This app has no launch target.'}); return; }
+    if (!IDS[brand]) { done({message: 'Deze app kan niet gestart worden.'}); return; }
     launchApp(IDS[brand], done);
   }
   function art(done) {

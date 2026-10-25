@@ -1,3 +1,13 @@
+> **Fork voor de Samsung UE55NU8070 thuis (2018, Tizen 4.0).** Bron: [nthnclrk/CleanFrame](https://github.com/nthnclrk/CleanFrame) 0.6.1 (MIT).
+> Aanpassingen: Nederlandse teksten, 24-uursklok, geen Art Mode (geen The Frame), eigen app-identiteit
+> `BuijsHome1.TvStart` ("Startscherm", `required_version` 4.0) en de apps van deze tv: Netflix
+> `RN1MCdNq8t.Netflix`, Videoland `WyN2wsAQHK.VideolandV2`, YouTube, TizenTube (via TizenBrew
+> `xvvl3S1bvH.TizenBrewStandalone`), Disney+, NPO Start, Jellyfin, Odido TV. App-ID's uitgelezen met
+> `sdb shell 0 vd_applist` (2026-10-25). Installeren gaat vanaf de NUC met de installer-image, zie
+> Home `home-assistant/README.md` ("Samsung-tv: extra apps"). **Geen** native Home-knop-aanpassing.
+> De browser-tests (`check:browser`) gaan nog uit van de originele apps en Engelse teksten.
+> Openstaand: [backlog#201](https://github.com/Buijsmans/backlog/issues/201).
+
 # CleanFrame
 
 A quieter home screen for Samsung The Frame. Your apps, a photograph and the time, with an interface made for the TV remote.
