@@ -5,6 +5,10 @@
 > (keuze gebruiker 2026-10-25; TizenTube en Odido TV niet op Home, wel via Alle apps). App-ID's uitgelezen met
 > `sdb shell 0 vd_applist` (2026-10-25). Installeren gaat vanaf de NUC met de installer-image, zie
 > Home `home-assistant/README.md` ("Samsung-tv: extra apps"). **Geen** native Home-knop-aanpassing.
+> **Achtergrond: één eigen foto (Palau, uit Immich)**, niet in git (deze fork is openbaar): `app/assets/wallpapers/palau*.jpg`,
+> `app/assets/materials/palau-*.jpg` en `app/assets/wallpapers/private-catalog.js` staan in `.gitignore`. Opnieuw maken:
+> Immich-asset `e679375c-…` (`thumbnail?size=fullsize`, 1920×1440) midden bijsnijden tot 1920×1080, thumb 512×288,
+> dan `node scripts/build-materials.mjs palau` met een tijdelijke `palau`-regel in `SOURCES.json` (Playwright-container op de NUC).
 > De browser-tests (`check:browser`) gaan nog uit van de originele apps en Engelse teksten.
 > Openstaand: [backlog#201](https://github.com/Buijsmans/backlog/issues/201).
 

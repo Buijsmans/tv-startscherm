@@ -27,3 +27,8 @@ PP*.woff2
 /explorations/
 /docs/research/
 /docs/articles/
+
+# Eigen foto's (privé, deze fork is openbaar): alleen lokaal en in de gebouwde widget.
+/app/assets/wallpapers/private-catalog.js
+/app/assets/wallpapers/palau*.jpg
+/app/assets/materials/palau-*.jpg

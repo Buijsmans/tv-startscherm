@@ -25,6 +25,8 @@ for filename in ['index.html']:
     for reference in re.findall(pattern, source):
         if ':' in reference or reference.startswith('$'):
             continue
+        if 'private-catalog' in reference and not (app / reference).is_file():
+            continue  # eigen foto's ontbreken in een verse clone
         assert (app / reference).is_file(), 'Missing bundled resource: ' + reference
         if filename.endswith('.js'):
             assert reference.startswith(('./', '../')), 'Module imports must be relative paths'
