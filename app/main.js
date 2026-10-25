@@ -17,11 +17,9 @@
     { id: 'netflix', name: 'Netflix', mark: true, appId: 'RN1MCdNq8t.Netflix' },
     { id: 'videoland', name: 'Videoland', mark: false, appId: 'WyN2wsAQHK.VideolandV2' },
     { id: 'youtube', name: 'YouTube', mark: true, appId: '9Ur5IzDKqV.TizenYouTube' },
-    { id: 'tizentube', name: 'TizenTube', mark: false, appId: 'xvvl3S1bvH.TizenBrewStandalone' },
     { id: 'disneyplus', name: 'Disney+', mark: true, appId: 'MCmYXNxgcu.DisneyPlus' },
     { id: 'npostart', name: 'NPO Start', mark: false, appId: 'iquaePhaki.npostart' },
-    { id: 'jellyfin', name: 'Jellyfin', mark: true, appId: 'AprZAARz4r.Jellyfin' },
-    { id: 'odidotv', name: 'Odido TV', mark: false, appId: 'OyP0deWouM.SamsungSmartTV' }
+    { id: 'jellyfin', name: 'Jellyfin', mark: true, appId: 'AprZAARz4r.Jellyfin' }
   ];
   var PRIMARY = PRIMARY_APPS.map(function (a) { return a.id; }), APPS = PRIMARY_APPS.slice(), ALPHA = [];
   var WALLS = window.CleanFrameWallpapers || [{ id: 'misty', name: 'Nevelige kust', tone: 'light', ut: { tr: 'mist', br: 'mist' }, frostVeil: .20 }];

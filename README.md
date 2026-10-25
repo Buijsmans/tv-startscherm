@@ -1,8 +1,8 @@
 > **Fork voor de Samsung UE55NU8070 thuis (2018, Tizen 4.0).** Bron: [nthnclrk/CleanFrame](https://github.com/nthnclrk/CleanFrame) 0.6.1 (MIT).
 > Aanpassingen: Nederlandse teksten, 24-uursklok, geen Art Mode (geen The Frame), eigen app-identiteit
 > `BuijsHome1.TvStart` ("Startscherm", `required_version` 4.0) en de apps van deze tv: Netflix
-> `RN1MCdNq8t.Netflix`, Videoland `WyN2wsAQHK.VideolandV2`, YouTube, TizenTube (via TizenBrew
-> `xvvl3S1bvH.TizenBrewStandalone`), Disney+, NPO Start, Jellyfin, Odido TV. App-ID's uitgelezen met
+> `RN1MCdNq8t.Netflix`, Videoland `WyN2wsAQHK.VideolandV2`, YouTube, Disney+, NPO Start, Jellyfin
+> (keuze gebruiker 2026-10-25; TizenTube en Odido TV niet op Home, wel via Alle apps). App-ID's uitgelezen met
 > `sdb shell 0 vd_applist` (2026-10-25). Installeren gaat vanaf de NUC met de installer-image, zie
 > Home `home-assistant/README.md` ("Samsung-tv: extra apps"). **Geen** native Home-knop-aanpassing.
 > De browser-tests (`check:browser`) gaan nog uit van de originele apps en Engelse teksten.

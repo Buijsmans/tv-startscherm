@@ -3,9 +3,9 @@
   'use strict';
   var IDS = {
     netflix: 'RN1MCdNq8t.Netflix', videoland: 'WyN2wsAQHK.VideolandV2',
-    youtube: '9Ur5IzDKqV.TizenYouTube', tizentube: 'xvvl3S1bvH.TizenBrewStandalone',
+    youtube: '9Ur5IzDKqV.TizenYouTube',
     disneyplus: 'MCmYXNxgcu.DisneyPlus', npostart: 'iquaePhaki.npostart',
-    jellyfin: 'AprZAARz4r.Jellyfin', odidotv: 'OyP0deWouM.SamsungSmartTV'
+    jellyfin: 'AprZAARz4r.Jellyfin'
   };
   var STREAMING = ['ESMP8SBFDH.videoland', 'iquaePhaki.npostart', 'kOzIRC5Wf7.NLziet', 'azFWqejcXJ.NLZiet', 'dkEzA1pxuO.RTLXL', '8H24TM2DAH.kijk',
     'evKhCgZelL.AmazonIgnitionLauncher2', 'skysh0WTIM.SkyShowtime', 'xf4VNjoz7A.SmartTVNextGen', 'fjZ4l75rVu.EVA', 'rJeHak5zRg.Spotify', 'com.samsung.tv.aria-video'];
